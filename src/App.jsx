@@ -7,6 +7,8 @@ import pauseIcon from "./assets/pauseIcon.svg"
 import playIcon from "./assets/playIcon.svg"
 import Dresscode from "./components/Dresscode";
 import Gifts from "./components/Gifts";
+import videoFondo from "./assets/video.mp4"
+import cancionFondo from "./assets/song.mp3"
 
 function App() {
   const variants ={
@@ -80,14 +82,14 @@ function App() {
         )}
       </button>
       <audio ref={audioRef} style={{ display: "none" }}>
-        <source src="src/assets/song.mp3" type="audio/mp3"  />
+        <source src={cancionFondo} type="audio/mp3"  />
         Tu navegador no soporta el elemento de audio.
       </audio>
     </div>
 
       <div className="backgroundVideo" onClick={() => document.getElementById('video').webkitEnterFullscreen()}>
         <video autoPlay loop muted playsInline id="vid">
-          <source src="src/assets/video.mp4" type="video/mp4" />
+          <source src={videoFondo} type="video/mp4" />
           Tu navegador no soporta el elemento de video.
         </video>
       </div>
