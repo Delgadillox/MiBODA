@@ -10,19 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@babel/runtime": "^7.23.9",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.6",
     "@mui/material": "^5.15.5",
     "framer-motion": "^11.0.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-swipeable-views-react-18-fix": "^0.14.1"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.9",
-    "@babel/preset-env": "^7.23.9",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@vitejs/plugin-react": "^4.2.1",

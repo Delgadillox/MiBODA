@@ -1,4 +1,4 @@
-import Carousel from "./Carousel"
+// import Carousel from "./Carousel"
 import '../styles/location.css'
 
 const Location = () => {
@@ -28,7 +28,7 @@ const Location = () => {
             </div>
 
           <div className="bottom-content" >
-            <Carousel />
+            {/* <Carousel /> */}
           </div>
         </div>
     </div>
