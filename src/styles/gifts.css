@@ -1,0 +1,131 @@
+.gifts{
+    .content{
+        padding: 2em;
+        width: 50%;
+    }
+
+    .text{
+        font-family: "Quicksand", sans-serif;
+        text-shadow: 2px 8px 4px rgba(0, 0, 0, 1);
+        font-size: 1.5vw;
+        font-weight: bold;
+    }
+
+    .sub{
+        color: #835F37;
+    }
+
+
+    .title {
+        font-family: 'AmsterdamOne', cursive;
+        font-size: 4vw;
+        text-shadow: 2px 8px 4px rgba(0, 0, 0, 1);
+        color: #835F37;
+    }
+
+    .redText{
+        color: red;
+        font-weight: bold;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column; /* Cambia la dirección de flex a columna */
+        align-items: center; /* Centra los divs horizontalmente */
+        margin: 20px;
+      }
+      
+      .cardDiv {
+        background-color: #ffffff; /* Fondo blanco */
+        border: 1px solid #e0e0e0; /* Borde gris claro */
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+        color: #000000; /* Texto negro */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombreado suave */
+        border-radius: 20px; /* Bordes redondeados */
+      }
+
+      .giftDiv {
+        display: flex; /* Para que los divs de Liverpool y Sears se alineen horizontalmente */
+      }
+      
+      .giftDiv img {
+        min-width: 100px;
+        max-height: 200px;
+      }
+      .bbvaLogo {
+        max-width: 2vw; /* Ajusta el tamaño según tus preferencias */
+        float: left; /* Alinea a la izquierda */
+        margin-right: 10px; /* Espaciado entre la imagen y el texto */
+      }
+
+      .lv{
+        transition: transform 0.3s ease; /* agrega una transición suave para el efecto de zoom */
+        transform: scale(1.2); 
+      }
+
+      .accountInfo {
+        overflow: hidden; /* Soluciona problemas de layout cuando se utiliza float */
+        
+      }
+      /* Estilo específico para el logo de BBVA */
+      .cardDiv img {
+        max-width: 220px; /* Ajusta el tamaño según tus preferencias */
+      }
+      
+      button{
+        background-color: #000000;
+        color: white;
+        margin: 5px;
+      }
+    
+}
+
+@media only screen and (max-width: 600px) {
+
+    .gifts{
+        .content{
+            padding: 2vw;
+            width: 80%;
+        }
+
+        .title {
+            font-family: 'AmsterdamOne', cursive;
+            font-size: 1.5em;
+            text-shadow: 2px 8px 4px rgba(0, 0, 0, 1);
+            color: #835F37;
+        }
+
+        .text{
+            font-size: 0.9em;
+        }
+
+        .container {
+            flex-direction: column; /* Cambia la dirección de flex a columna */
+          }
+
+        .bbvaLogo {
+            height: 70px;
+            max-width: 40%; /* Ajusta el tamaño según tus preferencias */
+            float: none; /* Elimina la alineación a la izquierda */
+            margin-right: 0; /* Elimina el espaciado entre la imagen y el texto */
+        }
+        
+        .giftDiv img {
+            min-width: 100px;
+            max-height: 100px;
+          }
+
+          .cardDiv {
+            background-color: #ffffff; /* Fondo blanco */
+            border: 1px solid #e0e0e0; /* Borde gris claro */
+            padding: 10px;
+            margin: 5px;
+            text-align: center;
+            color: #000000; /* Texto negro */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombreado suave */
+            border-radius: 20px; /* Bordes redondeados */
+          }
+    }
+}

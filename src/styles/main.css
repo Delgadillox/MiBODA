@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif&display=swap');
+
+@font-face {
+    font-family: 'CatchyMager';
+    src: url('Catchy Mager Regular.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AmsterdamOne';
+    src: url('AmsterdamOne.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'DS-DIGIT';
+  src: url('DS-DIGIT.TTF') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+.date {
+    font-family: "Quicksand", sans-serif;
+    text-shadow: 2px 8px 4px rgba(0, 0, 0, 0.5);
+    font-size: 1.5em; /* Ajusta el tamaño de fuente en relación con el ancho del viewport */
+    color: #cdb295;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-family: "Quicksand", sans-serif;
+    text-shadow: 2px 8px 4px rgba(0, 0, 0, 1);
+    color: #cdb295;
+    font-size: 1.5em; /* Ajusta el tamaño de fuente en relación con el ancho del viewport */
+}
+
+.title {
+    font-family: 'AmsterdamOne', cursive;
+    font-size: 4.5em; /* Ajusta el tamaño de fuente en relación con el ancho del viewport */
+    text-shadow: 2px 8px 4px rgba(0, 0, 0, 1);
+}
+
+.fullDate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Alinea el texto al centro */
+  }
+  
+  .dateContainer {
+    margin-right: 6%;
+    display: flex;
+    font-family: "Quicksand", sans-serif;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .separator {
+    font-weight: normal;
+    font-size: 3.5vw;
+    margin: 0 10px; /* Ajusta el espacio horizontal entre los separadores */
+  }
+  
+  .dateContainer span {
+    margin: 5px 10; /* Ajusta el espacio vertical entre los elementos span */
+  }
+  
+  .day{
+    font-family: "Quicksand", sans-serif;
+    text-shadow: 2px 8px 4px rgba(0, 0, 0, 1);
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #cdb295;
+  }
+
+  .dayNumber{
+    color: #cdb295;
+    text-shadow: 2px 8px 4px rgba(0, 0, 0, 1);
+    font-family: 'Droid Serif', serif;
+    font-size: 3.4em;
+    font-weight: 700;
+  }
+
+  .hour{
+    font-family: "Quicksand", sans-serif;
+    text-shadow: 2px 8px 4px rgba(0, 0, 0, 1);
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #cdb295;
+  }
+  .year {
+    color: #cdb295;
+    text-shadow: 2px 8px 4px rgba(0, 0, 0, 1);
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+  }
+
+    .main {
+      height: 100vh; /* Puedes ajustar esto según sea necesario */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+  .content {
+    text-align: center;
+    color: white;
+    padding: 1vw;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  .top-content,
+  .bottom-content {
+    width: 100%;
+    margin: 5% 0;
+  }
+
+.countdown {
+    font-family: 'Droid Serif', serif;
+    text-shadow: 2px 8px 4px rgba(0, 0, 0, 1);
+    font-size: 2.4em; /* Ajusta el tamaño de fuente en relación con el ancho del viewport */
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.countdown span{
+   font-family: 'DS-DIGIT', sans-serif;
+  background-color: black;
+  padding: 10px;
+}
+
+.puntos{
+  background-color: transparent !important;
+  padding: 1px !important;
+}
+
+.countdown p{
+  font-size: 0.4em;
+}
+
+.countdown div {
+    text-align: center;
+    margin: 2%;
+}
+
+.countdown p {
+    margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .countdown span{
+        font-size: 5vw; /* Ajusta el tamaño de fuente en relación con el ancho del viewport */
+    }
+    
+
+  .countdown p{
+      font-size: 2vw; /* Ajusta el tamaño de fuente en relación con el ancho del viewport */
+  }
+
+    .countdown div {
+
+        max-width: none;
+    }
+
+    .subtitle{
+      font-size: 4vw;
+    }
+
+    .content{
+      width: 100%;
+    }
+
+    .title,
+    .dayNumber{
+        font-size: 2.4em; /* Ajusta el tamaño de fuente en relación con el ancho del viewport */
+    }
+
+    .date,
+    .day,
+    .year, 
+    .hour{
+        font-size: 1em;
+    }
+}
+

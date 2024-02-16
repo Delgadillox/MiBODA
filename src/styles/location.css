@@ -1,0 +1,47 @@
+.location{
+    .content{
+        padding: 2em;
+        width: 50%;
+    }
+
+    .text{
+        font-family: "Quicksand", sans-serif;
+        text-shadow: 2px 8px 4px rgba(0, 0, 0, 1);
+        font-size: 1.5vw;
+        font-weight: bold;
+    }
+
+    .sub{
+        color: #cdb295;
+    }
+
+
+    .title {
+        font-family: 'AmsterdamOne', cursive;
+        font-size: 4vw;
+        text-shadow: 2px 8px 4px rgba(0, 0, 0, 1);
+        color: #cdb295;
+    }
+
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .location{
+        .content{
+            padding: 2vw;
+            width: 80%;
+        }
+
+        .title {
+            font-family: 'AmsterdamOne', cursive;
+            font-size: 2em;
+            text-shadow: 2px 8px 4px rgba(0, 0, 0, 1);
+        }
+
+        .text{
+            font-size: 0.9em;
+        }
+    }
+}
+

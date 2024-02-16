@@ -1,0 +1,85 @@
+.dresscode{
+    .container {
+        display: flex;
+        justify-content: center; /* Centrar horizontalmente */
+        align-items: center;
+      }
+      
+      .color {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+      
+
+
+    .content{
+        padding: 2em;
+        width: 50%;
+    }
+
+    .text{
+        font-family: "Quicksand", sans-serif;
+        text-shadow: 2px 8px 4px rgba(0, 0, 0, 1);
+        font-size: 1.5vw;
+        font-weight: bold;
+    }
+
+    .sub{
+        color: #cdb295;
+    }
+
+    .title {
+        font-family: 'AmsterdamOne', cursive;
+        font-size: 4vw;
+        text-shadow: 2px 8px 4px rgba(0, 0, 0, 1);
+        color: #cdb295;
+        font-weight: bold;
+    }
+
+    .redText{
+        color: red;
+        font-weight: bolder;
+    }
+
+    
+    .paletaImg{
+        width: 35vw;
+    }
+
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .dresscode{
+        .content{
+            padding: 2vw;
+            width: 80%;
+        }
+
+        .redText{
+            font-size: 0.9em;
+        }
+
+        .title {
+            font-family: 'AmsterdamOne', cursive;
+            font-size: 1.85em;
+            text-shadow: 2px 8px 4px rgba(0, 0, 0, 1);
+        }
+
+        .text{
+            font-size: 0.9em;
+        }
+
+        .color {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            margin-right: 20px;
+          }
+          
+
+    }
+}
+
