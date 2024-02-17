@@ -53,7 +53,8 @@
   right: 20px;
   width: 50px;
   height: 50px;
-  background-color: #3498db; /* Puedes cambiar el color */
+  background-color: #ffffff; /* Puedes cambiar el color */
+  color: white;
   border-radius: 50%;
   border: none;
   outline: none;
