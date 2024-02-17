@@ -67,6 +67,10 @@ function App() {
   }, []);
 
 
+  const handleCanPlay = () => {
+    const video = document.getElementById('vid'); // Reemplaza 'miVideo' con el ID de tu elemento de video
+    video.play();
+  };
 
   return (
     <div>
@@ -88,7 +92,7 @@ function App() {
     </div>
 
       <div className="backgroundVideo" onClick={() => document.getElementById('video').webkitEnterFullscreen()}>
-        <video autoPlay loop muted playsInline id="vid">
+        <video onCanPlay={handleCanPlay} autoPlay loop muted playsInline id="vid">
           <source src={videoFondo} type="video/mp4" />
           Tu navegador no soporta el elemento de video.
         </video>
