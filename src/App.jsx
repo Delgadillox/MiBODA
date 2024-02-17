@@ -7,7 +7,7 @@ import pauseIcon from "./assets/pauseIcon.svg"
 import playIcon from "./assets/playIcon.svg"
 import Dresscode from "./components/Dresscode";
 import Gifts from "./components/Gifts";
-import videoFondo from "./assets/video.mp4"
+import videoFondo from "./assets/video.gif"
 import cancionFondo from "./assets/song.mp3"
 
 function App() {
@@ -85,7 +85,7 @@ function App() {
         Tu navegador no soporta el elemento de audio.
       </audio>
     </div>
-    <div
+    {/* <div
         className="backgroundVideo"
           dangerouslySetInnerHTML={{
             __html: `<video autoplay loop muted playsinline id="vid">
@@ -93,13 +93,10 @@ function App() {
               Your browser does not support the video tag.
             </video>`,
           }}
-    />
-      {/* <div className="backgroundVideo" onClick={() => document.getElementById('video').webkitEnterFullscreen()}>
-        <video autoPlay loop muted playsInline id="vid">
-          <source ref={videoRef} src={videoFondo} type="video/mp4" />
-          Tu navegador no soporta el elemento de video.
-        </video>
-      </div> */}
+    /> */}
+    <div className="backgroundVideo">
+      <img src={videoFondo} alt="background"/>
+    </div>
       <div className="overlay"></div>
       <AnimatePresence>
         <motion.div className="main"
