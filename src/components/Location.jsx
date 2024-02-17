@@ -1,9 +1,5 @@
 import Carousel from "./Carousel"
 import '../styles/location.css'
-import salon1 from "../assets/salon1.jpg"
-import salon2 from "../assets/salon2.jpg"
-import salon3 from "../assets/salon3.jpg"
-
 const Location = () => {
 
   return (

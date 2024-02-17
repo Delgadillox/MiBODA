@@ -26,7 +26,6 @@ function App() {
     }
   } 
 
-  const videoRef = useRef(null);
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [firstClick, setFirstClick] = useState(true);
@@ -67,24 +66,6 @@ function App() {
     };
   }, []);
 
-  useEffect(() => {
-    const video = videoRef.current;
-
-    const handleEnded = () => {
-      // Vuelve a reproducir el video cuando termina
-      video.play();
-    };
-
-    // Agrega el evento 'ended' al video
-    video.addEventListener('ended', handleEnded);
-
-    // Limpia el evento al desmontar el componente
-    return () => {
-      video.removeEventListener('ended', handleEnded);
-    };
-  }, []);
-
-
 
   return (
     <div>
@@ -104,13 +85,21 @@ function App() {
         Tu navegador no soporta el elemento de audio.
       </audio>
     </div>
-
-      <div className="backgroundVideo" onClick={() => document.getElementById('video').webkitEnterFullscreen()}>
+    <div
+        className="backgroundVideo"
+          dangerouslySetInnerHTML={{
+            __html: `<video autoplay loop muted playsinline id="vid">
+              <source src=${videoFondo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>`,
+          }}
+    />
+      {/* <div className="backgroundVideo" onClick={() => document.getElementById('video').webkitEnterFullscreen()}>
         <video autoPlay loop muted playsInline id="vid">
           <source ref={videoRef} src={videoFondo} type="video/mp4" />
           Tu navegador no soporta el elemento de video.
         </video>
-      </div>
+      </div> */}
       <div className="overlay"></div>
       <AnimatePresence>
         <motion.div className="main"
