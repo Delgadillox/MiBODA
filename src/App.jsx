@@ -7,7 +7,8 @@ import pauseIcon from "./assets/pauseIcon.svg"
 import playIcon from "./assets/playIcon.svg"
 import Dresscode from "./components/Dresscode";
 import Gifts from "./components/Gifts";
-import videoFondo from "./assets/video.gif"
+import gifFondo from "./assets/video.gif"
+import videoFondo from "./assets/video.mp4"
 import cancionFondo from "./assets/song.mp3"
 
 function App() {
@@ -29,7 +30,8 @@ function App() {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [firstClick, setFirstClick] = useState(true);
-  const [currentTime, setCurrentTime] = useState(32)
+  const [currentTime, setCurrentTime] = useState(32);
+  const [isIOS, setIsIOS] = useState(false);
 
   const playPauseToggle = () => {
     if (audioRef.current.paused) {
@@ -50,6 +52,8 @@ function App() {
   };
 
   useEffect(() => {
+    const userAgent = window.navigator.userAgent.toLowerCase();
+    setIsIOS(/iphone|ipad|ipod/.test(userAgent));
     // Agrega un event listener para el clic en el documento
     const clickListener = () => {
       playPauseToggle();
@@ -85,18 +89,22 @@ function App() {
         Tu navegador no soporta el elemento de audio.
       </audio>
     </div>
-    {/* <div
+    {!isIOS ? (
+      <div
         className="backgroundVideo"
-          dangerouslySetInnerHTML={{
-            __html: `<video autoplay loop muted playsinline id="vid">
-              <source src=${videoFondo} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>`,
-          }}
-    /> */}
-    <div className="backgroundVideo">
-      <img src={videoFondo} alt="background"/>
-    </div>
+        dangerouslySetInnerHTML={{
+          __html: `<video autoplay loop muted playsinline id="vid">
+            <source src=${videoFondo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>`,
+        }}
+       />  
+    ) : (
+      <div className="backgroundVideo">
+        <img src={gifFondo} alt="background"/>
+      </div>
+    )}
+    
       <div className="overlay"></div>
       <AnimatePresence>
         <motion.div className="main"
