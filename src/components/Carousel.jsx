@@ -1,84 +1,42 @@
-// import * as React from 'react';
-// import { useTheme } from '@mui/material/styles';
-// import Box from '@mui/material/Box';
-// import MobileStepper from '@mui/material/MobileStepper';
-// import SwipeableViews from 'react-swipeable-views-react-18-fix';
-// import salon1 from "../assets/salon1.jpg"
-// import salon2 from "../assets/salon2.jpg"
-// import salon3 from "../assets/salon3.jpg"
+import React, { useState } from 'react';
+import '../styles/carousel.css'; // Asegúrate de tener los estilos CSS
+import salon1 from "../assets/salon1.jpg"
+import salon2 from "../assets/salon2.jpg"
+import salon3 from "../assets/salon3.jpg"
 
 
+const Carousel = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const images = [salon1, salon2, salon3];
 
-// const images = [
-//   {
-//     label: 'Salon1',
-//     imgPath: salon1,
-//   },
-//   {
-//     label: 'Salon2',
-//     imgPath: salon2,
-//   },
-//   {
-//     label: 'Salon3',
-//     imgPath: salon3,
-//   }
-// ];
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
 
-// function Carousel() {
-//   const theme = useTheme();
-//   const [activeStep, setActiveStep] = React.useState(0);
-//   const maxSteps = images.length;
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
 
-//   setTimeout(() => {
-//     setActiveStep(
-//       activeStep === images.length - 1 ? 0 : activeStep + 1
-//     );
-//   }, 5000);
+  return (
+    <div className="carousel">
+        
+      <div className="slider" style={{ transform: `translateX(${-currentIndex * 100}%)` }}>
+        {images.map((image, index) => (
+          <img
+            key={index}
+            className={index === currentIndex ? 'slide active' : 'slide'}
+            src={image}
+            alt={`Slide ${index + 1}`}
+          />
+        ))}        
+      </div>
+      <button className="arrow left" onClick={prevSlide}>&lt;</button>
+      <button className="arrow right" onClick={nextSlide}>&gt;</button>
+    </div>
+  );
+};
 
-//   const handleStepChange = (step) => {
-//     setActiveStep(step);
-//   };
+// Example usage:
 
-//   return (
-//     <Box sx={{ maxWidth: 400, flexGrow: 1 }}>
 
-//       <SwipeableViews
-//         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-//         index={activeStep}
-//         onChangeIndex={handleStepChange}
-//         enableMouseEvents
-//       >
-//         {images.map((step, index) => (
-//           <div key={step.label}>
-//             {Math.abs(activeStep - index) <= 2 ? (
-//               <Box
-//                 component="img"
-//                 sx={{
-//                   height: 255,
-//                   display: 'block',
-//                   maxWidth: 400,
-//                   overflow: 'hidden',
-//                   width: '100%',
-//                 }}
-//                 src={step.imgPath}
-//                 alt={step.label}
-//               />
-//             ) : null}
-//           </div>
-//         ))}
-//       </SwipeableViews>
-//       <MobileStepper
-//         steps={maxSteps}
-//         position="static"
-//         style={{
-//             marginLeft:"40%",
-//             marginRight:"50%",
-//             backgroundColor: "rgba(255,0,0,0)"
-//         }}
-//         activeStep={activeStep}
-//       />
-//     </Box>
-//   );
-// }
-
-// export default Carousel;
+export default Carousel;

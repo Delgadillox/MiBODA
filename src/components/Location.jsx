@@ -1,5 +1,8 @@
-// import Carousel from "./Carousel"
+import Carousel from "./Carousel"
 import '../styles/location.css'
+import salon1 from "../assets/salon1.jpg"
+import salon2 from "../assets/salon2.jpg"
+import salon3 from "../assets/salon3.jpg"
 
 const Location = () => {
 
@@ -28,7 +31,10 @@ const Location = () => {
             </div>
 
           <div className="bottom-content" >
-            {/* <Carousel /> */}
+            {/* <img src={salon1}/>
+            <img src={salon2}/>
+            <img src={salon3}/> */}
+            <Carousel />
           </div>
         </div>
     </div>
