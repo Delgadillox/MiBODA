@@ -2,10 +2,9 @@ import '../styles/dresscode.css'
 import riuImage from "../assets/riu.png";
 import pbImage from "../assets/pueblobonito.png";
 import cerritosImage from "../assets/descarga.jpg";
-import paletaColores from "../assets/colores.png";
 
 const Dresscode = () => {
-  const colores = ['rgb(120 107 93)', 'rgb(93 78 60)', 'rgb(90 67 42)', 'rgb(77 47 34)', 'rgb(45 35 24)']
+  const colores = ['#E1CEB9', '#C8B39C', '#CBDDFF', '#9FBFE4']
   return (
     <div name="dresscode" className="dresscode">
         <div className="content">
