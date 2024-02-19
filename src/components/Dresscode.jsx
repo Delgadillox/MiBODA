@@ -2,6 +2,7 @@ import '../styles/dresscode.css'
 import riuImage from "../assets/riu.png";
 import pbImage from "../assets/pueblobonito.png";
 import cerritosImage from "../assets/descarga.jpg";
+import codeImage from "../assets/vestimenta.png";
 
 const Dresscode = () => {
   const colores = ['#E1CEB9', '#C8B39C', '#CBDDFF', '#9FBFE4']
@@ -11,6 +12,8 @@ const Dresscode = () => {
           <div className="top-content">
             <span className="title">Código de Vestimenta</span><br/><br/>
             <br />
+            <span className='text'>FORMAL PLAYA</span><br/>
+            <img className="codeImage" src={codeImage} alt='desscode'/>
             <div className="container">
               {colores.map((color, index) => (
                 <div key={index} className="color" style={{ backgroundColor: color }}></div>
@@ -22,7 +25,7 @@ const Dresscode = () => {
             <br/>
             <span className='redText'>NO USAR COLOR BLANCO</span>
           </div>
-          <br/><br/><br/>
+          <br/>
 
           <div className="bottom-content" >
             <span className='title'>Hospedaje Sugerido</span><br/><br /><br />

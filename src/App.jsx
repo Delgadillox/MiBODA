@@ -129,7 +129,7 @@ function App() {
           <Location />
         </motion.div>
       </AnimatePresence>
-
+      
       <AnimatePresence>
         <motion.div 
           variants={variants}

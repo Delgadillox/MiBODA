@@ -1,6 +1,6 @@
 .carousel {
   position: relative;
-  width: 90%; /* Aumenta el ancho para dar espacio a los botones */
+  width: 55%; /* Aumenta el ancho para dar espacio a los botones */
   margin: auto;
   overflow: hidden;
 }
@@ -38,3 +38,13 @@
 .right {
   right: 10px;
 }
+
+@media only screen and (max-width: 1300px) {
+  .carousel {
+    position: relative;
+    width: 90%; /* Aumenta el ancho para dar espacio a los botones */
+    margin: auto;
+    overflow: hidden;
+  }
+}
+
