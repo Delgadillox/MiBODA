@@ -13,7 +13,7 @@ const Dresscode = () => {
             <span className="title">Código de Vestimenta</span><br/><br/>
             <br />
             <span className='text'>FORMAL PLAYA</span><br/>
-            <img className="codeImage" src={codeImage} alt='desscode'/>
+            <img className="codeImage" src={codeImage} alt='desscode'/><br/>
             <span className="text">PALETA DE COLORES</span><br/>
             <div className="container">
               {colores.map((color, index) => (
