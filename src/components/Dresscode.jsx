@@ -14,7 +14,7 @@ const Dresscode = () => {
             <br />
             <span className='text'>FORMAL PLAYA</span><br/>
             <img className="codeImage" src={codeImage} alt='desscode'/>
-            <span className="text">PALETA DE COLORES</span>
+            <span className="text">PALETA DE COLORES</span><br/>
             <div className="container">
               {colores.map((color, index) => (
                 <div key={index} className="color" style={{ backgroundColor: color }}></div>
