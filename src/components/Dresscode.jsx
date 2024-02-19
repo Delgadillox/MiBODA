@@ -21,7 +21,7 @@ const Dresscode = () => {
             </div>
 
             {/* <img src={paletaColores} className='paletaImg'/><br/> */}
-            <span className="text">Paleta de colores</span>
+            <span className="text">PALETA DE COLORES</span>
             <br/>
             <span className='redText'>NO USAR COLOR BLANCO</span>
           </div>
