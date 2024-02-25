@@ -40,7 +40,7 @@ const Gifts = () => {
     <div name="gifts" className="gifts">
         <div className="content">
           <div className="top-content">
-            <span className="title">Mesa de Regalos</span><br/><br />
+            <span className="title">Mesa  de Regalos</span><br/><br />
             <span className='text'>Su presencia es nuestro mejor regalo, pero si desea brindarnos algo más, será recibido con gran aprecio.</span>
             <div className="container">
               <div className="cardDiv">
