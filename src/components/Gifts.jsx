@@ -108,7 +108,11 @@ const Gifts = () => {
 				</div>
 
 				<div className='bottom-content'>
-					<span className='text'>¿Asistirás a la boda?</span>
+					<span className='text'>
+						¿Asistirás a la boda?
+						<br /> FAVOR DE CONFIRMAR{' '}
+						<span className='redText'>ANTES DE MAYO</span>
+					</span>
 					<br />
 					<br />
 					<label className='text'>
