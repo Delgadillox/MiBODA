@@ -10,7 +10,7 @@ const Start = () => {
 	});
 
 	const calculateTimeLeft = () => {
-		const targetDate = new Date('2024-11-30T17:00:00Z');
+		const targetDate = new Date('2024-11-30T17:30:00Z');
 		const now = new Date();
 		const difference = targetDate - now;
 
@@ -72,7 +72,7 @@ const Start = () => {
 							<span className='separator'>|</span>
 							<span className='dayNumber'>30</span>
 							<span className='separator'>|</span>
-							<span className='hour'>5 PM</span>
+							<span className='hour'>5:30 PM</span>
 						</div>
 						<span className='year'>2024</span>
 					</div>
