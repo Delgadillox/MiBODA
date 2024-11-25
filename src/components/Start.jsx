@@ -10,7 +10,7 @@ const Start = () => {
 	});
 
 	const calculateTimeLeft = () => {
-		const targetDate = new Date('2024-11-30T17:30:00Z');
+		const targetDate = new Date('2024-11-30T17:00:00Z');
 		const now = new Date();
 		const difference = targetDate - now;
 
