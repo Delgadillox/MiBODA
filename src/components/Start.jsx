@@ -72,7 +72,7 @@ const Start = () => {
 							<span className='separator'>|</span>
 							<span className='dayNumber'>30</span>
 							<span className='separator'>|</span>
-							<span className='hour'>5:30 PM</span>
+							<span className='hour'>5:00 PM</span>
 						</div>
 						<span className='year'>2024</span>
 					</div>
